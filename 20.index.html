@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Width & Height Methods</title>
+    <style media="screen">
+    .boxP{
+      overflow: hidden;
+    }
+      #box{
+        padding : 10px;
+        border : 10px solid #000;
+        border-radius: 5px;
+        width  : 300px;
+        margin : 10px;
+        margin-left: 0px;
+
+      }
+      #textBox{
+        width : 300px;
+        padding : 5px 10px;
+        border-radius: 5px;
+        outline : 0;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>jQuery Width & Height Methods</h1>
+
+    <div id="box">
+      <h2>Test Box</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <input id="textBox" type="text" name="" value="" disabled>
+
+    <br><br>
+    <button id="width" type="button" name="button">Width</button>
+    <button id="innerwidth" type="button" name="button">Inner Width</button>
+    <button id="outerwidth" type="button" name="button">Outer Width</button>
+    <button id="outerwidthtrue" type="button" name="button">Outer Width True</button>
+    <br><br>
+    <button id="height" type="button" name="button">Height</button>
+    <button id="innerheight" type="button" name="button">Inner Height</button>
+    <button id="outerheight" type="button" name="button">Outer Height</button>
+    <button id="outerheighttrue" type="button" name="button">Outer Height True</button>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#width").click(function(){
+          var width = $("#box").width();
+          $("#textBox").val(width);
+        });
+        $("#innerwidth").click(function(){
+          var width = $("#box").innerWidth();
+          $("#textBox").val(width);
+        });
+        $("#outerwidth").click(function(){
+          var width = $("#box").outerWidth();
+          $("#textBox").val(width);
+        });
+        $("#outerwidthtrue").click(function(){
+          var width = $("#box").outerWidth(true);
+          $("#textBox").val(width);
+        });
+
+        $("#height").click(function(){
+          var height = $("#box").height();
+          $("#textBox").val(height);
+        });
+        $("#innerheight").click(function(){
+          var height = $("#box").innerHeight();
+          $("#textBox").val(height);
+        });
+        $("#outerheight").click(function(){
+          var height = $("#box").outerHeight();
+          $("#textBox").val(height);
+        });
+        $("#outerheighttrue").click(function(){
+          var height = $("#box").outerHeight(true);
+          $("#textBox").val(height);
+        });
+
+      });
+    </script>
+  </body>
+</html>
